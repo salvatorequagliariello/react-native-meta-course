@@ -1,4 +1,4 @@
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, ScrollView } from "react-native";
 import LittleLemonFooter from "./components/LittleLemonFooter";
 import LittleLemonHeader from "./components/LittleLemonHeader";
 import MainContent from "./components/MainContent";
@@ -13,8 +13,12 @@ export default function App() {
         <LittleLemonHeader />
       </View>
       <View style={{flex: 1}}>
-        <MainContent />
-        <MenuItems />
+        <ScrollView style={{flex: 1}}>
+          <View style={{paddingBottom: 100}}> 
+            <MainContent />
+            <MenuItems />
+          </View>
+        </ScrollView>
       </View>
       <View style={{position: "absolute", bottom: 0, width: "100%"}}>
         <LittleLemonFooter />

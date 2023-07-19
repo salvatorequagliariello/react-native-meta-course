@@ -6,7 +6,7 @@ const items = ["Hummus", "Moutabal", "Falafel", "Marinated Olives", "Kofta", "Eg
 
 const MenuItems = () => {
     return (
-        <View style={{flex: 0.7}}>
+        <View style={{flex: 1}}>
             <Text style={{color: "white", fontSize: 20, marginLeft: 10, marginBottom: 10}}>Our Menu</Text>
             <ScrollView  style={{backgroundColor: "#4C6960", borderRadius: 20}}>
                 <View style={{paddingVertical: 10, paddingHorizontal: 20}}>
