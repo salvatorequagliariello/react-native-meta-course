@@ -1,0 +1,19 @@
+{
+  "name": "react-native-meta-course",
+  "version": "1.0.0",
+  "description": "react-native-meta-course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salvatorequagliariello/react-native-meta-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salvatorequagliariello/react-native-meta-course/issues"
+  },
+  "homepage": "https://github.com/salvatorequagliariello/react-native-meta-course#readme"
+}
