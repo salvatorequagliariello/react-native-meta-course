@@ -1,25 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text } from "react-native";
+import LittleLemonHeader from "./components/LittleLemonHeader";
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.ciao}>Spratanochia!</Text>
-      <StatusBar style="auto" />
+    <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
+      <LittleLemonHeader />
+      <Text style={{fontWeight: 700, fontSize: 30}}>
+        Ciao
+      </Text>
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: "100px",
-    fontSize: "4rem"
-  },
-  ciao: {
-    fontSize: 40,
-  }
-});
