@@ -37,14 +37,31 @@ const MenuItems = () => {
     const renderItem = ({item}) => <Item name={item.name} />
 
     return (
-        <View>
+        <View style={style.listContainer}>
             <FlatList style={style.list} data={list} keyExtractor={item => item.id} renderItem={renderItem} />
         </View>
     );
 };
 
 const style = StyleSheet.create({
-    list
+    listContainer: {
+        width: "90%",
+        backgroundColor: "#F4CE14",
+        marginTop: 20,
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        borderRadius: 10
+    },
+    textContainer: {
+        backgroundColor: "#5f8a7b",
+        marginVertical: 5,
+        padding: 5,
+        borderRadius: 5
+    },
+    text: {
+        color: "white",
+        fontSize: 19
+    }
 });
 
 export default MenuItems;
