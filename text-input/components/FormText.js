@@ -9,6 +9,7 @@ const FormText = () => {
                 Little Lemon is a charming neighborhood bistro that serves simple food and classsic cocktails in a
                 lively but casual environment. We would love to hear your experience with us!
             </Text>
+            <Text style={styles.titleThree}>Login to continue</Text>
         </View>
     );
 };
@@ -37,6 +38,12 @@ const styles = StyleSheet.create({
         textAlign: "center",
         paddingHorizontal: 20,
         fontSize: 17
+    },
+    titleThree: {
+        textAlign: "center",
+        marginTop: 50,
+        fontSize: 20,
+        fontWeight: 700
     }
 });
 

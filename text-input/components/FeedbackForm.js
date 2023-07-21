@@ -1,27 +1,23 @@
 import { useState } from "react";
-import { TextInput, View, Text, ScrollView, StyleSheet } from "react-native";
+import { TextInput, View, Text, ScrollView, StyleSheet, Alert } from "react-native";
 
 const FeedbackForm = () => {
-    const [firstName, setFirstName] = useState(``);
-    const [lastName, setLastName] = useState(``);
-    const [message, setMessage] = useState(``);
+    const [email, setEmail] = useState(``);
+    const [password, setPassword] = useState(``);
 
     return (
         <View style={styles.container}>
             <View>
-                <Text style={styles.label}>First name</Text>
-                <TextInput value={firstName} onChange={setFirstName} style={styles.name} placeholder="First name" placeholderTextColor="#bfbdbd" />
+                <Text style={styles.label}>Email</Text>
+                <TextInput value={email} onChange={setEmail} style={styles.name} placeholder="Enter Email" placeholderTextColor="#bfbdbd" maxLength={20} keyboardType="email-address"
+                onBlur={() => {if (email == "") Alert.alert("Please, fill the form!")}}/>
             </View>
 
             <View>
-                <Text style={styles.label}>Last name</Text>
-                <TextInput value={lastName} onChange={setLastName} style={styles.name} placeholder="Last name"  placeholderTextColor="#bfbdbd" />
+                <Text style={styles.label}>Password</Text>
+                <TextInput value={password} onChange={setPassword} style={styles.name} placeholder="Enter Password"  placeholderTextColor="#bfbdbd" secureTextEntry={true} maxLength={18} />
             </View>
-            
-            <View>
-                <Text style={styles.label}>Message</Text>
-                <TextInput value={message} onChange={setMessage} style={styles.message} placeholder="Message" multiline={true} placeholderTextColor="#bfbdbd" />
-            </View>
+        
         </View>
     );
 };
@@ -29,7 +25,7 @@ const FeedbackForm = () => {
 const styles = StyleSheet.create({
     container: {
         width: "100%",
-        marginTop: 20
+        marginTop: 10
     },
     label: {
         marginTop: 30,
@@ -41,16 +37,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         padding: 0,
         marginTop: 2,
-        placeholderTextColor: "red"
-    },
-    message: {
-        marginTop: 5,
-        borderColor: "#333333",
-        borderWidth: 1,
-        height: 100,
-        padding: 10,
-        textAlignVertical: "top",
-    },
+    }
 });
 
 export default FeedbackForm;
