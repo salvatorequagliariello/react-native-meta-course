@@ -6,7 +6,7 @@ import LittleHeader from './components/Header';
 export default function App() {
   return (
     <View style={styles.container}>
-      <LittleHeader style={styles.header} />
+      <LittleHeader />
       <FeedbackForm />
     </View>
   );
@@ -17,8 +17,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-  },
-  header: {
-    flex: 1
   }
 });

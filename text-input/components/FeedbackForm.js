@@ -3,20 +3,53 @@ import { TextInput, View, Text, ScrollView, StyleSheet } from "react-native";
 
 const FeedbackForm = () => {
     const [firstName, setFirstName] = useState(``);
-    const [LastName, setLastName] = useState(``);
+    const [lastName, setLastName] = useState(``);
     const [message, setMessage] = useState(``);
 
     return (
-        <View>
-            <TextInput value={firstName} onChange={setFirstName} style={styles.name} placeholder="First name" />
-            <TextInput placeholder="Last name" />
-            <TextInput placeholder="Message" />
+        <View style={styles.container}>
+            <View>
+                <Text style={styles.label}>First name</Text>
+                <TextInput value={firstName} onChange={setFirstName} style={styles.name} placeholder="First name" />
+            </View>
+
+            <View>
+                <Text style={styles.label}>Last name</Text>
+                <TextInput value={lastName} onChange={setLastName} style={styles.name} placeholder="Last name" />
+            </View>
+            
+            <View>
+                <Text style={styles.label}>Message</Text>
+                <TextInput value={message} onChange={setMessage} style={styles.message} placeholder="Message" multiline={true} />
+            </View>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-
+    container: {
+        width: "90%",
+        marginTop: 20
+    },
+    label: {
+        marginTop: 30,
+        textAlign: "left",
+        fontSize: 20
+    },
+    name: {
+        borderBottomColor: "#333333",
+        borderBottomWidth: 1,
+        padding: 0,
+        marginTop: 2
+    },
+    message: {
+        marginTop: 5,
+        borderColor: "#333333",
+        borderWidth: 1,
+        height: 100,
+        padding: 10,
+        textAlignVertical: "top",
+    }
 });
 
 export default FeedbackForm;
