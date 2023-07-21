@@ -10,9 +10,11 @@ export default function App() {
       <LittleHeader />
           <FormText />
       <View style={{flex: 1, width: "90%", alignContent:"center", alignItems: "center", margin: 0, padding: 0}}>
-        <ScrollView style={{width:"100%"}} keyboardDismissMode="on-drag">
-          <FeedbackForm />
-        </ScrollView>
+        <KeyboardAvoidingView style={{width:"100%"}} behavior={Platform.OS === "ios" ? "padding" : "height"}>
+          <ScrollView style={{width:"100%"}} keyboardDismissMode="on-drag">
+            <FeedbackForm />
+          </ScrollView>
+        </KeyboardAvoidingView>
       </View>
     </View>
   );
