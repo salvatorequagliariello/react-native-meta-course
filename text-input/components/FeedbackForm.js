@@ -10,17 +10,17 @@ const FeedbackForm = () => {
         <View style={styles.container}>
             <View>
                 <Text style={styles.label}>First name</Text>
-                <TextInput value={firstName} onChange={setFirstName} style={styles.name} placeholder="First name" />
+                <TextInput value={firstName} onChange={setFirstName} style={styles.name} placeholder="First name" placeholderTextColor="#bfbdbd" />
             </View>
 
             <View>
                 <Text style={styles.label}>Last name</Text>
-                <TextInput value={lastName} onChange={setLastName} style={styles.name} placeholder="Last name" />
+                <TextInput value={lastName} onChange={setLastName} style={styles.name} placeholder="Last name"  placeholderTextColor="#bfbdbd" />
             </View>
             
             <View>
                 <Text style={styles.label}>Message</Text>
-                <TextInput value={message} onChange={setMessage} style={styles.message} placeholder="Message" multiline={true} />
+                <TextInput value={message} onChange={setMessage} style={styles.message} placeholder="Message" multiline={true} placeholderTextColor="#bfbdbd" />
             </View>
         </View>
     );
@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
         borderBottomColor: "#333333",
         borderBottomWidth: 1,
         padding: 0,
-        marginTop: 2
+        marginTop: 2,
+        placeholderTextColor: "red"
     },
     message: {
         marginTop: 5,
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
         height: 100,
         padding: 10,
         textAlignVertical: "top",
-    }
+    },
 });
 
 export default FeedbackForm;
