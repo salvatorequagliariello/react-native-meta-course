@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     },
     textContainer: {
         backgroundColor: "#333333",
-        paddingTop: 25,
+        paddingTop: 60,
         paddingBottom: 10,
         width: "100%",
         marginBottom: 20
