@@ -44,11 +44,9 @@ const list = [
       },
     ];
 
-const Item = ({name, price, index, section}) => {
+const Item = ({name, price, index, data}) => {
     return (
-    <View style={[style.textContainer,
-        index === 0 && style.itemFirst,
-        index === section[data].length - 1 && style.itemLast]}>
+    <View style={style.textContainer}>
         <Text style={style.text}>{name}</Text>
         <Text style={style.text}>{price}</Text>
     </View>
@@ -56,7 +54,7 @@ const Item = ({name, price, index, section}) => {
 }
 
 const MenuItems = () => {
-    const renderItem = ({item, index, section}) => <Item name={item.name} price={item.price} index={index} section={section} />;
+    const renderItem = ({item, index, section}) => <Item name={item.name} price={item.price} index={index}/>;
     const renderSectionHeader = ({section: {title}}) => <Text style={style.sectionTitle}>{title}</Text>;
 
 
