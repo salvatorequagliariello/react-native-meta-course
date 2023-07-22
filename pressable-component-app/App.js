@@ -11,7 +11,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <LittleHeader />
-      <HomeView />
+      {!showMenu && <HomeView />}
       <Pressable style={styles.button} onPress={() => setShowMenu(!showMenu)}>
         {!showMenu && <Text style={styles.buttonText}>Show menu</Text>}
         {showMenu && <Text style={styles.buttonText}>Home</Text>}
