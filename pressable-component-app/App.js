@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { Pressable, StyleSheet, Text, View, Image } from 'react-native';
+import { Pressable, StyleSheet, Text, View, Image, useColorScheme } from 'react-native';
 import LittleHeader from './components/Header';
 import MenuList from './components/MenuItems';
 import HomeView from './components/HomeView';
 
 export default function App() {
+  const color = useColorScheme();
   const [showMenu, setShowMenu] = useState(false);
 
   return (

@@ -9,7 +9,14 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffffff",
+      "userInterfaceStyle": "automatic",
+      "ios": {
+        "userInterfaceStyle": "automatic"
+      },
+      "android": {
+        "userInterfaceStyle": "automatic"
+      }
     },
     "assetBundlePatterns": [
       "**/*"
@@ -26,5 +33,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     }
+    
   }
 }
