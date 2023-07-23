@@ -14,7 +14,7 @@ const Tab = createBottomTabNavigator();
 
   return (
     <NavigationContainer>
-      <Tab.Navigator  screenOptions={{ headerShown: false }}
+      <Tab.Navigator 
       screenOptions={({route}) => ({tabBarIcon: ({focused, color, size}) => {
         let iconName;
 
@@ -24,7 +24,8 @@ const Tab = createBottomTabNavigator();
         return <Ionicons name={iconName} size={size} color={color} />
       },
       tabBarActiveTintColor: "blue",
-      tabBarInactiveTintColor: "grey"})}>
+      tabBarInactiveTintColor: "grey",
+      headerShown: false})}>
         <Tab.Screen name="Welcome" component={HomeScreen}  />
         <Tab.Screen name="Menu" component={MenuList}  />
       </Tab.Navigator>
