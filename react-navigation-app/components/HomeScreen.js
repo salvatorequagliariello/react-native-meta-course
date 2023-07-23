@@ -9,7 +9,6 @@ const HomeView = ({navigation}) => {
             <Image accessible={true} accessibilityLabel="Little Lemon Logo" style={styles.imgBan} source={require("react-navigation-app/images/CMxz5ZMJTD-FD2j3MaiqtQ_71e6c17baa6049dbb4d10e74773e8bf1_Picture1.png")} />
             <Image accessible={true} accessibilityLabel="Little Lemon Logo" style={styles.imgBan} source={require("react-navigation-app/images/juabwFNFT2GpR-CE1ArQQw_da2e465ed0ad4c8b80a2e9e5f558e3f1_Picture3.png")} />
             <Image accessible={true} accessibilityLabel="Little Lemon Logo" style={styles.imgBan} source={require("react-navigation-app/images/Wu4k7G8-R3eCGxuU_qTI_A_4e06c8dbd17d48c383cea585289bfaf1_Picture4.png")} />
-            <Pressable style={styles.button} onPress={() => navigation.navigate("Menu")}><Text style={{color: "white"}}>View menu</Text></Pressable>
         </View>
     )
 };
