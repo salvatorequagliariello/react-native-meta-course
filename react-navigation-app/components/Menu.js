@@ -3,7 +3,8 @@ import { Text, View } from "react-native";
 const Menu = () => {
     return (
         <View>
-            <Text>Menu</Text>
+            <Text>Menu Cosa?
+            </Text>
         </View>
     );
 };
