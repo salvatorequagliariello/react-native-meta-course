@@ -1,4 +1,4 @@
-import { View, Text, SectionList, StyleSheet } from "react-native";
+import { View, Text, SectionList, StyleSheet, Pressable } from "react-native";
 
 const menuItems = [
     {
@@ -49,6 +49,7 @@ const MenuList = () => {
 
     return (
         <View style={styles.container}>
+            <Pressable></Pressable>
             <SectionList
             sections={menuItems}
             renderItem={renderItem}
@@ -62,25 +63,25 @@ const MenuList = () => {
 
 const styles = StyleSheet.create({
     list: {
-        width: "100%",
+      width: "100%",
     },  
     header: {
-        fontSize: 19,
-        textAlign: "left",
-        color: "#F4CE14",
-        marginBottom: 10,
-        marginTop: 20
+      fontSize: 19,
+      textAlign: "left",
+      color: "#F4CE14",
+      marginTop: 20,
     },
     item: {
-        color: "white",
-        fontSize: 24,
-        backgroundColor: "#333333",
-        paddingHorizontal: 15,
-        paddingVertical: 5,
+      color: "white",
+      fontSize: 24,
+      backgroundColor: "#333333",
+      paddingHorizontal: 15,
+      paddingVertical: 5,
     },
     container: {
-        width: "90%",
-        paddingVertical: 10,
+      backgroundColor: "#333333",
+        width: "100%",
+        paddingHorizontal: 20,
         flex: 1
     }
 })

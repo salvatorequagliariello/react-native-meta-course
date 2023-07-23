@@ -1,6 +1,6 @@
-import { Text, View, StyleSheet, useColorScheme } from "react-native";
+import { Text, View, StyleSheet, useColorScheme, Pressable } from "react-native";
 
-const LittleHeader = () => {
+const LittleHeader = ({navigation}) => {
 const color = useColorScheme();
 
     return (
@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         width: "100%",
         marginBottom: 20,
-        backgroundColor: "#333333"
-    }
+        backgroundColor: "#333333",
+    },
 });
 
 export default LittleHeader;

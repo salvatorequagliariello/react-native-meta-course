@@ -13,12 +13,19 @@ const Stack = createNativeStackNavigator();
 
   return (
     <NavigationContainer>
-      <LittleHeader />
-      <StatusBar translucent={true}></StatusBar>
-      <Stack.Navigator initialRouteName="Form" screenOptions={{headerShown: false}} >
-        <Stack.Screen name="Form" component={FeedbackForm} />
-        <Stack.Screen name="Welcome" component={HomeScreen} />
-        <Stack.Screen name="Menu" component={MenuList} />
+      <Stack.Navigator initialRouteName="Form"  screenOptions={{headerStyle: {
+          backgroundColor: "#333333",
+          borderTopWidth: 20,
+          height: 50
+        }, headerTintColor: '#fff',
+        headerTitleStyle: {
+          textAlign: "center",
+          fontWeight: '200',
+          fontSize: 27,
+        }, statusBarTranslucent: true, statusBarStyle: "inverted"}} >
+        <Stack.Screen name="Form" component={FeedbackForm} options={{title: "LITTLE LEMON"}} />
+        <Stack.Screen name="Welcome" component={HomeScreen} options={{title: "LITTLE LEMON"}} />
+        <Stack.Screen name="Menu" component={MenuList} options={{title: "LITTLE LEMON"}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

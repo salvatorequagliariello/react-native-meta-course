@@ -1,6 +1,6 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, Pressable } from "react-native";
 
-const HomeView = () => {
+const HomeView = ({navigation}) => {
     return (
         <View style={styles.imgContainer}>
             <Image accessible={true} accessibilityLabel="Little Lemon Logo" style={styles.img} source={require("react-navigation-app/images/yh3S-4LcQXGO99idg4HpPg_92f701034da44942a42fee3e878fc1a1_LIttle-Lemon-Logo.png")} />
@@ -9,6 +9,7 @@ const HomeView = () => {
             <Image accessible={true} accessibilityLabel="Little Lemon Logo" style={styles.imgBan} source={require("react-navigation-app/images/CMxz5ZMJTD-FD2j3MaiqtQ_71e6c17baa6049dbb4d10e74773e8bf1_Picture1.png")} />
             <Image accessible={true} accessibilityLabel="Little Lemon Logo" style={styles.imgBan} source={require("react-navigation-app/images/juabwFNFT2GpR-CE1ArQQw_da2e465ed0ad4c8b80a2e9e5f558e3f1_Picture3.png")} />
             <Image accessible={true} accessibilityLabel="Little Lemon Logo" style={styles.imgBan} source={require("react-navigation-app/images/Wu4k7G8-R3eCGxuU_qTI_A_4e06c8dbd17d48c383cea585289bfaf1_Picture4.png")} />
+            <Pressable style={styles.button} onPress={() => navigation.navigate("Menu")}><Text style={{color: "white"}}>View menu</Text></Pressable>
         </View>
     )
 };
@@ -35,6 +36,14 @@ const styles = StyleSheet.create({
         marginTop: 10,
         width: "90%",
         height: 100
+    },
+    button: {
+        alignSelf: "center",
+        marginTop: 20,
+        backgroundColor: "#333333",
+        paddingHorizontal: 40,
+        paddingVertical: 15,
+        borderRadius: 15,
     }
 })
 
