@@ -4,26 +4,23 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './components/HomeScreen';
-import Menu from './components/Menu';
+import FeedbackForm from './components/FeedbackForm';
+import LittleHeader from './components/HeaderLittle';
+import MenuList from './components/MenuItems';
 
 export default function App() {
 const Stack = createNativeStackNavigator();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Welcome'>
+      <LittleHeader />
+      <StatusBar translucent={true}></StatusBar>
+      <Stack.Navigator initialRouteName="Form" screenOptions={{headerShown: false}} >
+        <Stack.Screen name="Form" component={FeedbackForm} />
         <Stack.Screen name="Welcome" component={HomeScreen} />
-        <Stack.Screen name="Menu" component={Menu} />
+        <Stack.Screen name="Menu" component={MenuList} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
