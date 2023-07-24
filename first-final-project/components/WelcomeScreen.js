@@ -7,7 +7,7 @@ const WelcomeScreen = ({navigation}) => {
         <View style={styles.container}>
             <Image style={styles.img} source={require("first-final-project/assets/little-lemon-logo.png")} /> 
             <Text style={styles.paragraph}>Little Lemon, your local Mediterranean Bistro.</Text>
-            <Pressable style={styles.button}><Text style={{color: "white", fontSize: 16, letterSpacing: 0.5}}>Newsletter</Text></Pressable>
+            <Pressable onPress={() => navigation.navigate("News")} style={styles.button}><Text style={{color: "white", fontSize: 16, letterSpacing: 0.5}}>Newsletter</Text></Pressable>
         </View>
     );
 };
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#3E514B",
         width: "87%",
         alignItems: "center",
-        paddingVertical: 8,
+        paddingVertical: 10,
         position: "absolute",
         bottom: 20,
         borderRadius: 10
