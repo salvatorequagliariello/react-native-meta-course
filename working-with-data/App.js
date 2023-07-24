@@ -11,8 +11,8 @@ import {
 const renderItem = ({item}) => {
   return (
     <View style={{flexDirection: "row", justifyContent:"space-between", paddingHorizontal: 20, backgroundColor: '#495E57', paddingVertical: 10}}>
-    <Text style={{fontSize: 19, color: "white"}}>{item.title}</Text>
-    <Text style={{fontSize: 19, color: "white"}}>{item.price}</Text>
+      <Text style={{fontSize: 19, color: "white"}}>{item.title}</Text>
+      <Text style={{fontSize: 19, color: "#F4CE14"}}>$ {item.price}.00</Text>
     </View>
   )
 }
@@ -55,7 +55,7 @@ const menuStyles = StyleSheet.create({
     backgroundColor: '#495E57',
   },
   headerText: {
-    color: 'white',
+    color: '#F4CE14',
     fontSize: 30,
     textAlign: 'center',
     marginBottom: 30,
