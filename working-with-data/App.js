@@ -7,6 +7,9 @@ import {
   StyleSheet,
   SafeAreaView,
 } from 'react-native';
+import menuItems from "./menuItems.json"
+const { menu } = menuItems;
+
 
 const renderItem = ({item}) => {
   return (
@@ -18,33 +21,10 @@ const renderItem = ({item}) => {
 }
 
 export default App = () => {
-  const [isLoading, setLoading] = useState(true);
-  const [data, setData] = useState([]);
-
-  const getMenu = async () => {
-    try {
-      const response = await fetch("https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/littleLemonSimpleMenu.json");
-      const json = await response.json();
-      setData(json.menu);
-    } catch (error) {
-      console.error(error);
-    } finally  {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    getMenu();
-    }, []);
-  
   return (
     <SafeAreaView style={menuStyles.container}>
       <Text style={menuStyles.headerText}>Little Lemon</Text>
-      {isLoading ? (
-        <ActivityIndicator />
-      ) : (
-          <FlatList data={data} renderItem={renderItem} keyExtractor={item => item.id}/> 
-      )}
+      <FlatList data={menu} renderItem={renderItem} />
     </SafeAreaView>
   );
 };
