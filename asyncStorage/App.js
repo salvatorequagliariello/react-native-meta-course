@@ -1,11 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
+import { Switch } from 'react-native-paper';
 
 export default function App() {
+  const [preferences, setPreferences] = React.useState({
+    pushNotifications: false,
+    emailMarketing: false,
+    latestNews: false,
+  });
+
+  const updateState = (key) => () =>
+    setPreferences((prevState) => ({
+      ...prevState,
+      [key]: !prevState[key],
+    }));
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.header}>Account Preferences</Text>
+      <View style={styles.row}>
+        <Text>Push notifications</Text>
+        <Switch
+          value={preferences.pushNotifications}
+          onValueChange={updateState('pushNotifications')}
+        />
+      </View>
+      <View style={styles.row}>
+        <Text>Marketing emails</Text>
+        <Switch
+          value={preferences.emailMarketing}
+          onValueChange={updateState('emailMarketing')}
+        />
+      </View>
+      <View style={styles.row}>
+        <Text>Latest news</Text>
+        <Switch
+          value={preferences.latestNews}
+          onValueChange={updateState('latestNews')}
+        />
+      </View>
     </View>
   );
 }
@@ -13,8 +47,19 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#ecf0f1',
+    padding: 16,
+  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 16,
+  },
+  header: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
